@@ -1,0 +1,6 @@
+{
+  "name": "The Love Algorithm — Can Code Understand Love?",
+  "description": "A cinematic, romantic interactive experience exploring whether an AI system can calculate love, created with code by @hack.n.code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

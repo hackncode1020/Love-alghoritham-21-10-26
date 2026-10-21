@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050507;
+    color: #fdf2f4;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-serif-romantic {
+  font-family: var(--font-serif);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom glow and glassmorphism */
+.glow-crimson {
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.4), 0 0 50px rgba(255, 45, 117, 0.2);
+}
+
+.glow-crimson-lg {
+  box-shadow: 0 0 40px rgba(225, 29, 72, 0.6), 0 0 80px rgba(255, 45, 117, 0.35);
+}
+
+.glow-pink-text {
+  text-shadow: 0 0 12px rgba(255, 45, 117, 0.7), 0 0 24px rgba(225, 29, 72, 0.4);
+}
+
+.glow-rosegold-text {
+  text-shadow: 0 0 14px rgba(245, 199, 184, 0.6);
+}
+
+.glass-panel {
+  background: rgba(20, 10, 16, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 45, 117, 0.15);
+}
+
+.glass-panel-subtle {
+  background: rgba(15, 8, 12, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animations */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes scanLine {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+/* Custom scrollbars hidden */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
